@@ -1,0 +1,50 @@
+erDiagram
+ USUARIOS ||--o{ RESULTADOS : obtiene
+ CUESTIONARIOS ||--o{ PREGUNTAS : contiene
+ CUESTIONARIOS ||--o{ RESULTADOS : registra
+ USUARIOS {
+  int id_usuario PK
+  varchar nombre
+  varchar correo
+  varchar rol
+ }
+ FALTAS_VIALES {
+  int id_falta PK
+  varchar nombre
+  varchar categoria
+  text descripcion
+  text recomendacion
+  varchar fundamento
+ }
+ REGLAMENTO {
+  int id_reglamento PK
+  varchar titulo
+  varchar articulo
+  text contenido
+  varchar categoria
+ }
+ CUESTIONARIOS {
+  int id_cuestionario PK
+  varchar titulo
+  text descripcion
+  boolean activo
+ }
+ PREGUNTAS {
+  int id_pregunta PK
+  int id_cuestionario FK
+  text enunciado
+  varchar opcion_a
+  varchar opcion_b
+  varchar opcion_c
+  varchar opcion_d
+  char respuesta_correcta
+ }
+ RESULTADOS {
+  int id_resultado PK
+  int id_usuario FK
+  int id_cuestionario FK
+  int aciertos
+  int total_preguntas
+  decimal porcentaje
+  timestamp fecha_resultado
+ }

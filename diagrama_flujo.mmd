@@ -1,0 +1,16 @@
+flowchart TD
+ A([Inicio]) --> B[Entrar a CECyTO Vial]
+ B --> C{Seleccionar sección}
+ C --> D[Consultar reglamento]
+ C --> E[Buscar infracciones]
+ C --> F[Responder cuestionario]
+ D --> G[Leer información preventiva]
+ E --> H[Filtrar y abrir ficha]
+ F --> I[Validar respuesta y mostrar explicación]
+ I --> J{¿Hay más preguntas?}
+ J -- Sí --> F
+ J -- No --> K[Calcular resultado]
+ K --> L[Guardar resultado en MySQL]
+ G --> M([Fin o volver al menú])
+ H --> M
+ L --> M

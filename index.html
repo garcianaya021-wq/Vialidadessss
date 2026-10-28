@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#087f5b">
+<title>CECyTO Vial | Plataforma de educación vial</title>
+<link rel="stylesheet" href="styles.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#inicio"><span class="brandmark">CV</span><span>CECyTO <b>Vial</b><small>Educación · Prevención · Responsabilidad</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  <nav id="mainNav">
+    <a href="#inicio">Inicio</a><a href="#aprende">Aprende</a><a href="#infracciones">Infracciones</a><a href="#practica">Cuestionario</a><a href="#progreso">Mi progreso</a>
+  </nav>
+  <span class="online"><i></i> Plataforma educativa</span>
+</header>
+<main>
+<section class="hero screen" id="inicio">
+ <div class="hero-copy">
+  <span class="kicker">VILLA VICTORIA · ESTADO DE MÉXICO</span>
+  <h1>El camino seguro <em>comienza contigo.</em></h1>
+  <p>Aprende a identificar infracciones, comprende las buenas prácticas al conducir y fortalece tus conocimientos con ejercicios interactivos de seguridad vial.</p>
+  <div class="actions"><a class="btn primary" href="#aprende">Explorar la plataforma <span>↗</span></a><a class="btn ghost" href="#practica">Hacer una práctica</a></div>
+  <div class="hero-trust"><span>✓</span> Contenido educativo para promover decisiones responsables.</div>
+ </div>
+ <div class="hero-art" aria-label="Ilustración de seguridad vial">
+  <div class="sun"></div><div class="sign sign-stop">STOP</div><div class="signal"><i></i><i></i><i></i></div>
+  <div class="road"><span></span><span></span><span></span></div>
+  <div class="art-note"><b>01 / SEGURIDAD VIAL</b><p>Respeta las señales.<br>Protege cada vida.</p></div>
+ </div>
+</section>
+<section class="quick-stats">
+ <article><span class="stat-icon">◈</span><div><b id="statFaults">12</b><small>Temas de prevención</small></div></article>
+ <article><span class="stat-icon">✓</span><div><b id="statQuestions">10</b><small>Preguntas de práctica</small></div></article>
+ <article><span class="stat-icon">↗</span><div><b>100%</b><small>Enfoque educativo</small></div></article>
+ <article><span class="stat-icon">⌖</span><div><b>Villa Victoria</b><small>Nuestra comunidad</small></div></article>
+</section>
+<section class="section screen" id="aprende">
+ <div class="section-head"><div><span class="kicker">01 — APRENDE</span><h2>Conducir bien es una decisión diaria.</h2><p>Explora principios esenciales para protegerte y cuidar a las demás personas.</p></div><span class="section-number">01</span></div>
+ <div class="learning-grid">
+  <article class="learn-card"><span class="learn-icon mint">↗</span><span class="mini-label">PREVENCIÓN</span><h3>Anticipa los riesgos</h3><p>Observa el camino, conserva una distancia segura y adapta tu conducción al clima y al tránsito.</p><a href="#infracciones">Conocer más →</a></article>
+  <article class="learn-card"><span class="learn-icon yellow">◉</span><span class="mini-label">SEÑALIZACIÓN</span><h3>Lee las señales</h3><p>Reconoce señales preventivas, restrictivas e informativas y sigue las indicaciones correspondientes.</p><a href="#infracciones">Conocer más →</a></article>
+  <article class="learn-card"><span class="learn-icon blue">♡</span><span class="mini-label">CONVIVENCIA</span><h3>Comparte la vía</h3><p>Respeta a peatones, ciclistas, motociclistas y demás usuarios de la vía pública.</p><a href="#infracciones">Conocer más →</a></article>
+  <article class="learn-card"><span class="learn-icon coral">!</span><span class="mini-label">RESPONSABILIDAD</span><h3>Decide con cuidado</h3><p>Evita distracciones, no conduzcas bajo efectos del alcohol y mantén el vehículo en condiciones seguras.</p><a href="#practica">Practicar →</a></article>
+ </div>
+ <div class="notice"><span>i</span><p><b>Importante:</b> este sitio es una herramienta educativa. Las sanciones y artículos concretos deben confirmarse en el reglamento oficial vigente aplicable al Estado de México y al municipio.</p></div>
+</section>
+<section class="section tinted screen" id="infracciones">
+ <div class="section-head"><div><span class="kicker">02 — CONSULTA</span><h2>Explora las infracciones.</h2><p>Busca por nombre o categoría y abre cada ficha para consultar recomendaciones preventivas.</p></div><span class="section-number">02</span></div>
+ <div class="searchline"><label class="searchbox"><span>⌕</span><input id="searchInput" placeholder="Buscar infracción, palabra o categoría..." aria-label="Buscar infracción"></label><span class="result-count" id="faultCount">Cargando fichas...</span></div>
+ <div class="filters" id="filters"><button class="filter active" data-filter="Todas">Todas</button><button class="filter" data-filter="Seguridad">Seguridad</button><button class="filter" data-filter="Conducta">Conducta</button><button class="filter" data-filter="Señalización">Señalización</button><button class="filter" data-filter="Documentación">Documentación</button></div>
+ <div class="fault-grid" id="faultGrid"><p class="muted">Cargando información...</p></div>
+</section>
+<section class="feature-band">
+ <div class="feature-symbol">✳</div><div><span class="kicker light-kicker">03 — PONLO EN PRÁCTICA</span><h2>Aprender también es practicar.</h2><p>Responde situaciones cotidianas y revisa la explicación de cada respuesta.</p></div><a class="btn white-btn" href="#practica">Comenzar cuestionario →</a>
+</section>
+<section class="section screen" id="practica">
+ <div class="section-head"><div><span class="kicker">03 — CUESTIONARIO</span><h2>¿Qué tan preparado estás?</h2><p>Selecciona una respuesta por pregunta. Recibirás retroalimentación inmediata.</p></div><span class="section-number">03</span></div>
+ <div class="quiz-layout">
+  <div class="quiz-card">
+   <div class="quiz-meta"><span class="pill">PRÁCTICA EDUCATIVA</span><span id="questionCounter">Pregunta 1 de 10</span></div>
+   <div class="progress"><span id="progressBar"></span></div>
+   <div id="questionArea"><p class="muted">Preparando preguntas...</p></div>
+   <div id="feedback" class="feedback" aria-live="polite"></div>
+   <div class="quiz-actions"><button class="btn ghost" id="restartQuiz">Reiniciar</button><button class="btn primary" id="nextQuestion" disabled>Comprobar respuesta</button></div>
+  </div>
+  <aside class="quiz-aside"><span class="aside-mark">✦</span><span class="kicker">RECUERDA</span><h3>El objetivo es aprender.</h3><p>Una respuesta incorrecta es una oportunidad para reforzar tus conocimientos. Lee la explicación antes de continuar.</p><hr><b>Consejo de seguridad</b><p>Si una situación te parece peligrosa, reduce el riesgo y prioriza la vida de las personas.</p></aside>
+ </div>
+</section>
+<section class="section tinted screen" id="progreso">
+ <div class="section-head"><div><span class="kicker">04 — MI PROGRESO</span><h2>Cada práctica cuenta.</h2><p>Consulta los resultados registrados en la base de datos cuando el servidor esté conectado.</p></div><button class="btn ghost" id="refreshResults">↻ Actualizar</button></div>
+ <div class="result-cards"><article><small>Prácticas registradas</small><b id="totalResults">0</b><span>Intentos guardados</span></article><article><small>Promedio de aciertos</small><b id="averageScore">—</b><span>De tus prácticas registradas</span></article><article><small>Estado de conexión</small><b id="connectionState">Comprobando</b><span id="connectionDetail">Consultando servidor</span></article></div>
+ <div class="table-wrap"><table><thead><tr><th>Fecha</th><th>Cuestionario</th><th>Aciertos</th><th>Resultado</th></tr></thead><tbody id="resultsBody"><tr><td colspan="4">Aún no hay resultados registrados.</td></tr></tbody></table></div>
+</section>
+<section class="closing screen">
+ <span class="kicker light-kicker">CECyTO VIAL</span><h2>La seguridad vial la construimos entre todos.</h2><p>Infórmate, practica y toma decisiones responsables cada vez que compartas la vía pública.</p><a class="btn white-btn" href="#inicio">Volver al inicio ↑</a>
+</section>
+</main>
+<footer class="footer"><a class="brand" href="#inicio"><span class="brandmark">CV</span><span>CECyTO <b>Vial</b><small>Educación y prevención vial</small></span></a><p>Proyecto educativo · Villa Victoria, Estado de México</p><a href="#inicio">Volver arriba ↑</a><small>La información es educativa y no sustituye el reglamento oficial vigente.</small></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>
